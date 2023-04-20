@@ -10,7 +10,6 @@
     ":pinAllExceptPeerDependencies",
   ],
   dependencyDashboard: true,
-  rebaseWhen: "conflicted",
   lockFileMaintenance: {
     enabled: true, // As all direct dependencies are pinned, this only updates the transitive dependencies
     automerge: false, // stabilityDays interfere with safe automerge See https://github.com/renovatebot/renovate/discussions/13982
