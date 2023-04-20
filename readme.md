@@ -17,3 +17,21 @@ DEBUG: Aggregate error is thrown (repository=cassus/renovate_invalid_hashicorp_c
        }
 ...
 ```
+
+
+## Workaround I found (see branch `fixes_it`)
+
+adding this to required_providers
+```
+local = {
+      source = "hashicorp/local"
+      version = "2.4.0"
+    }
+```
+
+and running `terraform init`
+
+adds 
+`constraints = "2.4.0"` line to the lock file where there was no constraints line before.
+
+Terraform worked fine without this line, but without it, renovate fails.
