@@ -10,7 +10,6 @@
     ":pinAllExceptPeerDependencies",
   ],
   dependencyDashboard: true,
-  semanticCommits: "enabled",
   rebaseWhen: "conflicted",
   lockFileMaintenance: {
     enabled: true, // As all direct dependencies are pinned, this only updates the transitive dependencies
