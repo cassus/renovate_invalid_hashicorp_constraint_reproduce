@@ -1,9 +1,23 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  dependencyDashboard: true,
+  // dependencyDashboard: true,
   lockFileMaintenance: {
     enabled: true, // As all direct dependencies are pinned, this only updates the transitive dependencies
     automerge: false, // stabilityDays interfere with safe automerge See https://github.com/renovatebot/renovate/discussions/13982
   },
 
+
+// try to make it work without dependencyDashboard
+
+"packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "enabled": true,
+      "schedule": ["at any time"]
+    }
+  ]
 }
