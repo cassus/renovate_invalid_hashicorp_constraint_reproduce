@@ -22,3 +22,8 @@ module "db1_prod_socket_url" {
   id         = "x"
   secret     = "secret"
 }
+
+resource "local_file" "x" {
+  filename = "x"
+  content = "x"
+}
