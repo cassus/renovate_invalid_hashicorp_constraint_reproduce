@@ -5,9 +5,6 @@
     ":semanticCommitTypeAll(deps)",
     ":semanticCommitScopeDisabled",
 
-    // Pin all dependency versions except engine and peerDependencies
-    // Related to defaultSemverRangePrefix setting in .yarnrc.yml
-    ":pinAllExceptPeerDependencies",
   ],
   dependencyDashboard: true,
   lockFileMaintenance: {
