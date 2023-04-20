@@ -2,29 +2,6 @@
 # Manual edits may be lost in future updates.
 
 
-
-provider "registry.terraform.io/checkly/checkly" {
-  version     = "1.6.5"
-  constraints = "1.6.5"
-  hashes = [
-    "h1:0dMSiB9zmlC9fmxyIymIBXkaDwNEiO41TN60i3jo8WQ=",
-    "zh:052d05f267c021e871bdccd22b8be5774fef46bf4967871fbe09415525cc3dad",
-    "zh:131806a963d161d246887781eb3699015a60ef3aad946c069340b9f69a8195ed",
-    "zh:1a2d336b298a02994eee94d4310813cc2d6605265eb303903b099ac3cdbe2929",
-    "zh:1ab533095664eccb37876a5db38d4dd7192d0b4ad32cfa1cf44fc8859f3d82d8",
-    "zh:1ff592d1bf662ef9fb50b67610bb9598002fb4a90c70155c779ab5565b3c7041",
-    "zh:2f72eafb7157667966054410cf51db9488af2ff46039da87294e16be30405131",
-    "zh:41ff0c4158aea6820622e009a056a5c6912fd79891118dc750f8d3500080c150",
-    "zh:49327e175fc457d7dfb0c6b5cdfd093548c0fd7ec928b288c0789c1ac9188686",
-    "zh:54e66d01f979fa603ec4df6ec50a74653bc78b2bbe901da1c99689818aa793ad",
-    "zh:675818d330f6a23d0e821cb45de53f0358bdfda20fe28765e2545f9a8311b0ee",
-    "zh:6b1a44621af95284d92c25f680add57ab0fe698242ee0e257be29138b630c5fc",
-    "zh:8935be53ed973a6c00a7acadddca0bc62d84593821033b214e8c9089ef0228c0",
-    "zh:9a14e79451354d6325f2c6dfed269af73f60fb790e37381802d57324f4576d93",
-    "zh:d987125ddf393b0d11c06f391b09699fef766976bf834c1305f91c9f9ae9e61d",
-  ]
-}
-
 provider "registry.terraform.io/hashicorp/google" {
   version     = "4.54.0"
   constraints = ">= 4.8.0, 4.54.0"
