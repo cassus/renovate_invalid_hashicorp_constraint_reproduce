@@ -1,0 +1,1 @@
+The issues seems to only trigger when the "chore: lock file maintenance" checkbox is checked on dependency dashboard.
