@@ -1,0 +1,31 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "config:base",
+    ":semanticCommitTypeAll(deps)",
+    ":semanticCommitScopeDisabled",
+
+    // Pin all dependency versions except engine and peerDependencies
+    // Related to defaultSemverRangePrefix setting in .yarnrc.yml
+    ":pinAllExceptPeerDependencies",
+  ],
+  dependencyDashboard: true,
+  semanticCommits: "enabled",
+  rebaseWhen: "conflicted",
+  prConcurrentLimit: 1,
+  timezone: "Europe/Budapest",
+  major: {
+    dependencyDashboardApproval: true,
+  },
+  lockFileMaintenance: {
+    enabled: true, // As all direct dependencies are pinned, this only updates the transitive dependencies
+    automerge: false, // stabilityDays interfere with safe automerge See https://github.com/renovatebot/renovate/discussions/13982
+  },
+
+  // Only upgrade to at least 14 days old packages
+  // The rest are still visible, on the dependency dashboard.
+  // npm packages less than 72 hours (3 days) old can be unpublished, so this is a minimum we want to keep.
+  stabilityDays: 14,
+  internalChecksFilter: "strict",
+
+}
